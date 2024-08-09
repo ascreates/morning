@@ -2,6 +2,7 @@ import EditTopicListItem from "../../componenets/EditTopicListItem";
 import { staticTopics } from "../../data/topics";
 import { Reorder } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function EditPage() {
   const [topics, setTopics] = useState(staticTopics);
@@ -12,22 +13,24 @@ function EditPage() {
         topic.id === id ? { ...topic, added: chosen } : topic
       )
     );
-    console.log(id, chosen);
+    // reorderTopics(() => 
+
+    // );
+
   }
 
   return (
     <main className="pt-10 px-6 bg-black-800 flex flex-col justify-center h-full">
-      <div className="my-4">
-        <p>Edit items</p>
-      </div>
+      <Link to="/" className="text-white">Back</Link>
+      <p className="text-white self-center my-4">Edit items</p>
 
       <Reorder.Group
         values={topics}
-        onReorder={(e) => console.log(e)}
+        onReorder={setTopics}
         className="grid gap-4 grid-cols-2"
       >
         {topics.map((topic) => (
-          <Reorder.Item value={topic} key={topic.id}>
+          <Reorder.Item value={topic} key={topic.id} drag>
             <EditTopicListItem
               topic={topic}
               key={topic.id}

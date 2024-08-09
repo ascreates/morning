@@ -7,6 +7,7 @@ export const staticTopics: Topic[] = [
     added: false,
     icon: "lightening.svg",
     duration: "15 sec",
+    order: 1
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const staticTopics: Topic[] = [
     added: true,
     icon: "weather.svg",
     duration: "15 sec",
+    order: 2
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ export const staticTopics: Topic[] = [
     added: true,
     icon: "calendar.svg",
     duration: "1 min",
+    order: 3
   },
   {
     id: 4,
@@ -28,5 +31,6 @@ export const staticTopics: Topic[] = [
     added: false,
     icon: "loudspeaker.svg",
     duration: "3 min",
+    order: 4
   },
 ];

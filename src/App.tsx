@@ -1,21 +1,8 @@
-import TopicItem from "./componenets/TopicItem";
-import EditTopicListItem from "./componenets/EditTopicListItem";
-import { staticTopics } from "./data/topics";
-import { Reorder } from "framer-motion";
-import { useState } from "react";
+// import { Reorder } from "framer-motion";
 import { Outlet } from "react-router-dom";
 
 function App() {
-  const [topics, setTopics] = useState(staticTopics);
 
-  function updateTopicSelection(id: number, chosen: boolean) {
-    setTopics((prevTopics) =>
-      prevTopics.map((topic) =>
-        topic.id === id ? { ...topic, added: chosen } : topic
-      )
-    );
-    console.log(id, chosen);
-  }
 
   return (
     <div>

@@ -22,6 +22,9 @@ export default function EditTopicListItem({
       >
         <div className="bg-black-700 p-4 rounded-2xl h-full">
           <div className="flex flex-nowrap flex-row justify-between mb-4">
+          <p className="font-lato text-3xl font-extrabold text-black-400">
+              {topic.order}
+            </p>
             <label>
               <input
                 type="checkbox"

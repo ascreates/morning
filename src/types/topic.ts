@@ -4,4 +4,5 @@ export interface Topic {
   added: boolean;
   icon: string;
   duration: string;
+  order: number;
 }
