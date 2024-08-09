@@ -16,7 +16,7 @@ function EditPage() {
     // reorderTopics(() => 
 
     // );
-
+    console.log(topics);
   }
 
   return (

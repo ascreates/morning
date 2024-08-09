@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import TopicItem from "../../componenets/TopicItem";
 import { staticTopics } from "../../data/topics";
-import { useState } from "react";
+import { createContext, useState } from "react";
 
 export default function HomePage() {
   const [topics] = useState(staticTopics);
+  console.log(topics);
 
   return (
     <main className="pt-10 px-6 bg-black-800 flex flex-col justify-center h-full">
       <img src="images/Morning!.png" className="w-3/12 self-center" />
-      <div className="text-white  mx-auto mb-12">
+      <div className="text-white">
         <div className="my-2 flex flex-nowrap flex-row justify-between ">
           <p>You will hear...</p>
           <Link to="/edit">
@@ -20,9 +21,7 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4 grid-cols-2">
           {topics.map((topic, index: number) => (
-            // topic.added ? <TopicItem topic={topic} index={index} key={topic.id} /> : ""
             <TopicItem topic={topic} index={index} key={topic.id} />
-            // <p key={topic.id}>{topic.title}</p>
           ))}
         </div>
       </div>
